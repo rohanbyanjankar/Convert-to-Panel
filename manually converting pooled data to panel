@@ -1,0 +1,48 @@
+#Written by Rohan Byanjankar
+#Convert pooled data to panel data
+#www.rohanbyanjankar.com.np
+#Install and import packages
+library(readxl)
+library(svDialogs)
+setwd("D:/~Drive Share (Rohan)/01 Shared Access/~R program/Converting to Panel/")
+Pooled <- read_excel(file.choose())
+view(Pooled)
+#converting data in Panel form
+#***************************************************************
+#***************************************************************
+#Only change these values
+name_file <- dlgInput("Data is about?",Sys.info()["user"])$res
+startingyear <- as.numeric(dlgInput("Starting Year",Sys.info()["user"])$res)
+endyear <- as.numeric(dlgInput("Ending Year",Sys.info()["user"])$res)
+n <- as.numeric(dlgInput("Number of countries",Sys.info()["user"])$res)
+numbers_col_before_year <- as.numeric(dlgInput("Columns before year starts",Sys.info()["user"])$res)
+#***************************************************************
+#***************************************************************
+t <- startingyear:endyear
+n1 <- 1:n
+#Creating country panel
+country <- rep(Pooled$`Country Name`,length(t))
+country_data <- data.frame(country)
+country_name <- country_data[order(country_data$country),]
+country_panel <- data.frame(country_name)
+#creating year panel
+#we need to repeat years 8 times for 8 countries
+years_panel <- rep(t,n)
+years_panel
+#creating GDPPP panel
+GDPPP_panel=c()
+for(i in n1){
+  x=Pooled[i,]
+  x=x[-c(1:numbers_col_before_year)] #x is values starting from second column
+  x=t(x) #transposing x
+  GDPPP_panel <- rbind(GDPPP_panel,x)
+}
+panel_data <- cbind(country_panel,years_panel,GDPPP_panel)
+colnames(panel_data) <- c("Country","years",name_file)
+panel_data
+#Save Panel data to Excel
+write_xlsx(panel_data,dlgInput("File name of Converted Dataset",Sys.info()["user"])$res)
+remove(name_file,x,i,panel_data,country,country_data,country_name,country_panel,n1,n,numbers_col_before_year,startingyear,t,years_panel,endyear,GDPPP_panel)
+panel_convert <- read_excel(file.choose())
+view(Pooled)
+view(panel_convert)
