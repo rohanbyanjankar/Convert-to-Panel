@@ -26,7 +26,7 @@ country_data <- data.frame(country)
 country_name <- country_data[order(country_data$country),]
 country_panel <- data.frame(country_name)
 #creating year panel
-#we need to repeat years 8 times for 8 countries
+#we need to repeat years 't' times for 'n' countries
 years_panel <- rep(t,n)
 years_panel
 #creating GDPPP panel
