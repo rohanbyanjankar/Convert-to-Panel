@@ -1,0 +1,37 @@
+﻿type,mode,year,volume
+Large Value,RTGS,2020/21,49029
+Large Value,ECC,2020/21,1122295
+Large Value,IPS,2020/21,980237
+Large Value,ConnectIPS,2020/21,1403873
+Retail Payments,ATM,2020/21,6790646
+Retail Payments,Debit Cards,2020/21,7478022
+Retail Payments,Internet Banking,2020/21,302056
+Retail Payments,Mobile Banking,2020/21,8681369
+Retail Payments,Wallet,2020/21,9890521
+Retail Payments,QR-Based Payments,2020/21,372176
+Retail Payments,Point of Sales (POS),2020/21,734376
+Retail Payments,Others,2020/21,337703
+Large Value,RTGS,2021/22,64254
+Large Value,ECC,2021/22,1184985
+Large Value,IPS,2021/22,1661251
+Large Value,ConnectIPS,2021/22,3145959
+Retail Payments,ATM,2021/22,8458944
+Retail Payments,Debit Cards,2021/22,9298079
+Retail Payments,Internet Banking,2021/22,256228
+Retail Payments,Mobile Banking,2021/22,13518936
+Retail Payments,Wallet,2021/22,13712206
+Retail Payments,QR-Based Payments,2021/22,1918526
+Retail Payments,Point of Sales (POS),2021/22,995037
+Retail Payments,Others,2021/22,353677
+Large Value,RTGS,2022/23,68774
+Large Value,ECC,2022/23,1003928
+Large Value,IPS,2022/23,2459453
+Large Value,ConnectIPS,2022/23,4320252
+Retail Payments,ATM,2022/23,9680057
+Retail Payments,Debit Cards,2022/23,10469376
+Retail Payments,Internet Banking,2022/23,234387
+Retail Payments,Mobile Banking,2022/23,21645162
+Retail Payments,Wallet,2022/23,17176406
+Retail Payments,QR-Based Payments,2022/23,5618826
+Retail Payments,Point of Sales (POS),2022/23,1002294
+Retail Payments,Others,2022/23,443737
